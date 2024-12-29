@@ -197,3 +197,4 @@
 	patches.armbian/Add-BananaPi-BPI-M4-Zero-pinctrl.patch
 	patches.armbian/Fix-ghost-touches-tsc2007.patch
 	patches.armbian/preempt_rt.patch
+	patches.armbian/opi02w_audio.patch

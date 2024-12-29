@@ -1,0 +1,50 @@
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h616.dtsi b/arch/arm64/boot/dts/allwinner/sun50i-h616.dtsi
+index 4c1b61b3c..42d160df3 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-h616.dtsi
++++ b/arch/arm64/boot/dts/allwinner/sun50i-h616.dtsi
+@@ -231,6 +231,18 @@ ahub1_plat:ahub1_plat {
+                         status          = "disabled";
+                 };
+ 
++		ahub_dam_mach:ahub_dam_mach {
++			compatible = "allwinner,sunxi-snd-mach";
++                        soundcard-mach,name = "ahubdam";
++                        status          = "disabled";
++                        soundcard-mach,cpu {
++                                sound-dai = <&ahub_dam_plat>;
++                        };
++                        soundcard-mach,codec {
++                        };
++                };
++
++
+                 ahub1_mach:ahub1_mach {
+                         compatible = "allwinner,sunxi-snd-mach";
+                         soundcard-mach,name = "HDMI";
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h618-orangepi-zero2w.dts b/arch/arm64/boot/dts/allwinner/sun50i-h618-orangepi-zero2w.dts
+index e5afc9149..b75a6ef94 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-h618-orangepi-zero2w.dts
++++ b/arch/arm64/boot/dts/allwinner/sun50i-h618-orangepi-zero2w.dts
+@@ -294,6 +294,22 @@ &codec {
+         status = "okay";
+ };
+ 
++&ahub_dam_plat {
++        status = "okay";
++};
++
++&ahub_dam_mach {
++        status = "okay";
++};
++
++&ahub1_plat {
++        status = "okay";
++};
++
++&ahub1_mach {
++        status = "okay";
++};
++
+ &uart0 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&uart0_ph_pins>;

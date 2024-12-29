@@ -125,6 +125,12 @@ else
 		mixer_cmds Headphone 0db on
 		mixer_cmds 'AIF1 Slot 0 Digital DAC' on
 
+	        # Allwinner H618 Analog
+		mixer_cmds 'Left Output Mixer DACL' 100%
+		mixer_cmds 'Left Output Mixer DACR' 100%
+		mixer_cmds 'Right Output Mixer DACL' 100%
+		mixer_cmds 'Right Output Mixer DACR' 100%
+
 		# Amlogic G12 HDMI to PCM0
 		mixer_cmds 'FRDDR_A SINK 1 SEL' 'OUT 1'
 		mixer_cmds 'FRDDR_A SRC 1 EN' on
